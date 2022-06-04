@@ -25,9 +25,9 @@
 				</div>
 				<h3 style="padding-top:30px" >San Antonio de Padua I</h3>
 				</section>
-				<section>
+				<section data-state="trait">
 					<h3>¿Qué es la FP Dual?</h3>
-					<p class="fragment">La FP Dual
+					<p>La FP Dual
 						es una modalidad formativa en la que las empresas y los centros educativos son corresponsables de la
 					   formación del alumnado matriculado en un ciclo de formación profesional mediante la alternancia de estancias entre
 					   el centro docente y la empresa</p>
@@ -86,9 +86,11 @@
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
 			Reveal.addEventListener('traitsSlide', function(){
-  				TweenMax.staggerFrom('#list li', 2, {delay:1, scale:0, alpha:0, ease:'Back.easeOut'}, 0.25);
+  				TweenMax.staggerFrom('#list li', 2.6, {delay:1, scale:0, alpha:0, ease:'Back.easeOut'}, 0.25);
 				});
-
+				Reveal.addEventListener('trait', function(){
+  				TweenMax.staggerFrom('p', 2.6, {delay:1, scale:0, alpha:0, ease:'Back.easeOut'}, 0.25);
+				});
 
 		</script>
 
