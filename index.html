@@ -25,7 +25,7 @@
 				</div>
 				<h3 style="padding-top:30px" >San Antonio de Padua I</h3>
 				</section>
-				<section data-state="trait">
+				<section>
 					<h3>¿Qué es la FP Dual?</h3>
 					<p>La FP Dual
 						es una modalidad formativa en la que las empresas y los centros educativos son corresponsables de la
@@ -34,9 +34,9 @@
 				</section>
 
 				
-				<section data-state="traitsSlide">
+				<section>
 					<h3>¿Por qué cursar FP Dual?</h3>
-					<ul id="list">
+					<ul>
 					  <li>Permite obtener una primera experiencia en un entorno real de trabajo.</li>
 					  <li>Aumenta las posibilidades de encontrar trabajo</li>
 					  <li>Al finalizar el grado se obtiene una titulación
@@ -48,8 +48,30 @@
 							habilidades y competencias profesionales, muy requeridas por
 							el mercado laboral </li>
 					</ul>
-					
 				  </section>
+
+				  <section>
+					<h3>¿En qué momento se desarrolla la FP Dual?</h3>
+					<p>El centro San Antonio de Padua I oferta la FP Dual durante el segundo trimestre 
+						del segundo curso del grado medio de Gestión y Administración
+					</p>
+				</section>
+
+				<section>
+					<h3>¿Qué empresas mantienen convenio vigente con el centro?</h3>
+					<ul>
+						<li >Asesoria Begur</li>
+						<li>...</li>
+
+					</ul>
+				</section>
+				<section>
+					<h3>¿Recibiré una compensación económica por parte de la empresa?</h3>
+					<p>El departamento del GM de Gestión y Administración está trabajando en la búsqueda de empresas 
+					que colaboren en la FP Dual dispuestas a realizar un desembolso económico tal y como exige el 
+					DECRETO 47/2021. 
+				</p>
+				</section>
 			</div>
 		</div>
 		<style>
@@ -85,13 +107,14 @@
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
-			Reveal.addEventListener('traitsSlide', function(){
-  				TweenMax.staggerFrom('#list li', 2.6, {delay:1, scale:0, alpha:0, ease:'Back.easeOut'}, 0.25);
+			
+			Reveal.on("slidechanged",event=>{
+			//TweenMax.From('h3', 2.6, {delay:1, scale:0, alpha:0, ease:'Back.easeOut'}, 0.25);
+			TweenMax.from('h3', 1.5, {x:-300,opacity:0, delay:1});
+			TweenMax.staggerFrom(['p','li'], 2.6, {delay:1, scale:0, alpha:0, ease:'Back.easeOut'}, 0.25);
 				});
-				Reveal.addEventListener('trait', function(){
-  				TweenMax.staggerFrom('p', 2.6, {delay:1, scale:0, alpha:0, ease:'Back.easeOut'}, 0.25);
-				});
-
+				
+			
 		</script>
 
 	</body>
