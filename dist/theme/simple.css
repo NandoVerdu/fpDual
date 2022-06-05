@@ -101,6 +101,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 
 .reveal h3 {
   font-size: var(--r-heading3-size);
+  color: #8b743d;
 }
 
 .reveal h4 {

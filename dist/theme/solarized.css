@@ -102,6 +102,7 @@ html * {
 
 .reveal h3 {
   font-size: var(--r-heading3-size);
+  color: #8b743d;
 }
 
 .reveal h4 {
